@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
-
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './_components/auth/signup/signup.component';
@@ -15,6 +15,10 @@ import { CurrenttrainingComponent } from './_components/training/currenttraining
 import { PasttrainingsComponent } from './_components/training/pasttrainings/pasttrainings.component';
 import { WelcomeComponent } from './_components/welcome/welcome.component';
 import { NewtrainingComponent } from './_components/training/newtraining/newtraining.component';
+import { HeaderComponent } from './_components/navigation/header/header.component';
+import { SidenavListComponent } from './_components/navigation/sidenav-list/sidenav-list.component';
+
+import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -25,16 +29,19 @@ import { NewtrainingComponent } from './_components/training/newtraining/newtrai
     CurrenttrainingComponent,
     PasttrainingsComponent,
     WelcomeComponent,
-    NewtrainingComponent
+    NewtrainingComponent,
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

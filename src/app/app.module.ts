@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { AppComponent } from './app.component';
 import { SignupComponent } from './_components/auth/signup/signup.component';
@@ -39,7 +40,8 @@ import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapte
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    NgSelectModule
   ],
   providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}}],
   bootstrap: [AppComponent]

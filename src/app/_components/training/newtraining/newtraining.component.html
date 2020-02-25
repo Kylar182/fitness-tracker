@@ -1,3 +1,24 @@
-<p>
-  newtraining works!
-</p>
+<section class="new-training" fxLayout fxLayoutAlign="center">
+  <mat-card fxFlex.xs="100%" fxFlex="400px">
+    <mat-card-title fxLayoutAlign="center">
+      Time to start a workout!
+    </mat-card-title>
+    <section>
+      <p fxLayoutAlign="center">Select training type</p>
+      <ng-select [items]="exercises"
+      bindLabel="name"
+      autofocus
+      bindValue="id"
+      [(ngModel)]="selectedExercise">
+        <ng-template ng-label-tmp let-item="item">
+          {{item.name}}
+        </ng-template>
+      </ng-select>
+    </section>
+    <mat-card-actions fxLayoutAlign="center">
+      <button type="submit" mat-raised-button color="primary">
+        Start
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</section>

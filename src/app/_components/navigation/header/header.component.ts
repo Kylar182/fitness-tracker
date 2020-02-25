@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',

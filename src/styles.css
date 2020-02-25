@@ -1,5 +1,5 @@
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
-
+@import "~@ng-select/ng-select/themes/material.theme.css";
 /**
 * Generated theme by Material Theme Generator
 * https://materialtheme.arcsine.dev
@@ -1937,4 +1937,8 @@ html, body {
 body {
   margin: 0;
   height: 100%;
+}
+
+ng-select {
+  width: 100%;
 }

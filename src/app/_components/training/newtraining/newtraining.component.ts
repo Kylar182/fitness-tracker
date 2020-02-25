@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Exercise } from 'src/app/_models/Excercise';
 
 @Component({
   selector: 'app-newtraining',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./newtraining.component.css']
 })
 export class NewtrainingComponent implements OnInit {
+  exercises: Exercise[];
+  selectedExercise: Exercise;
 
   constructor() { }
 
   ngOnInit() {
+    this.exercises = [
+      { id: 'crunches', name: 'Crunches' },
+      { id: 'touch-toes', name: 'Touch Toes' },
+      { id: 'side-lunges', name: 'Side Lunges' },
+      { id: 'burpees', name: 'Burpees' }
+    ];
   }
 
 }

@@ -3,20 +3,18 @@
     <mat-card-title fxLayoutAlign="center">
       Time to start a workout!
     </mat-card-title>
-    <section>
-      <p fxLayoutAlign="center">Select training type</p>
+    <mat-card-content>
       <ng-select [items]="exercises"
       bindLabel="name"
       autofocus
-      bindValue="id"
+      appendTo="body"
+      placeholder="Select training type"
       [(ngModel)]="selectedExercise">
-        <ng-template ng-label-tmp let-item="item">
-          {{item.name}}
-        </ng-template>
       </ng-select>
-    </section>
+    </mat-card-content>
     <mat-card-actions fxLayoutAlign="center">
-      <button type="submit" mat-raised-button color="primary">
+      <button type="submit" mat-raised-button color="primary"
+      (click)="onStartTraining()">
         Start
       </button>
     </mat-card-actions>

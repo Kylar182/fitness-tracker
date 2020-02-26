@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Exercise } from 'src/app/_models/Excercise';
 
 @Component({
@@ -9,6 +9,7 @@ import { Exercise } from 'src/app/_models/Excercise';
 export class NewtrainingComponent implements OnInit {
   exercises: Exercise[];
   selectedExercise: Exercise;
+  @Output() trainingStart = new EventEmitter<void>();
 
   constructor() { }
 
@@ -21,4 +22,7 @@ export class NewtrainingComponent implements OnInit {
     ];
   }
 
+  onStartTraining() {
+    this.trainingStart.emit();
+  }
 }

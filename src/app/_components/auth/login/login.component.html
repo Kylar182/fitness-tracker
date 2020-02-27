@@ -7,10 +7,11 @@
       <mat-error *ngIf="!emailInput.hasError('required')">Email is invalid</mat-error>
       <mat-error *ngIf="emailInput.hasError('required')">Email is required</mat-error>
     </mat-form-field>
-    <mat-form-field hintLabel="At least 6 characters">
+    <mat-form-field hintLabel="At least 8 characters">
       <input type="password" matInput placeholder="Your password" 
-      ngModel name="password" required minlength="6" #pwInput="ngModel">
-      <mat-hint align="end">{{ pwInput.value?.length}} / 6</mat-hint>
+      ngModel name="password" required minlength="8" #pwInput="ngModel">
+      <mat-hint align="end">{{ pwInput.value?.length}} / 8</mat-hint>      
+      <mat-error></mat-error>
     </mat-form-field>
     <button type="submit" mat-raised-button color="primary" [disabled]="login.invalid">
       <mat-icon>add_circle_outline</mat-icon> Submit

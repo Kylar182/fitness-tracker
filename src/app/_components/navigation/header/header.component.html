@@ -8,9 +8,26 @@
       <div><a routerLink="/">Logo</a></div>
       <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
         <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li><a routerLink="/signup">Signup</a></li>
-          <li><a routerLink="/login">Login</a></li>
-          <li><a routerLink="/training">Training</a></li>
+          <li *ngIf="!isAuth" class="mr-3">
+            <a routerLink="/signup">
+              <mat-icon>person</mat-icon> Signup
+            </a>
+          </li>
+          <li *ngIf="!isAuth" class="mr-3">
+            <a routerLink="/login">
+              <mat-icon>input</mat-icon> Login
+            </a>
+          </li>
+          <li *ngIf="isAuth" class="mr-3">
+            <a routerLink="/training">
+              <mat-icon>fitness_center</mat-icon> Training
+            </a>
+          </li>
+          <li *ngIf="isAuth" class="mr-3">
+            <a style="cursor: pointer;" (click)="onLogout()">
+              <mat-icon>eject</mat-icon> Logout
+            </a>
+          </li>
         </ul>
       </div>
     </mat-toolbar>

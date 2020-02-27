@@ -20,6 +20,8 @@ import { HeaderComponent } from './_components/navigation/header/header.componen
 import { SidenavListComponent } from './_components/navigation/sidenav-list/sidenav-list.component';
 
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
+import { StopTrainingDialog } from './_components/training/currenttraining/stop-training/stop-training.component';
+import { AuthService } from './_services/AuthService';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapte
     WelcomeComponent,
     NewtrainingComponent,
     HeaderComponent,
-    SidenavListComponent
+    SidenavListComponent,
+    StopTrainingDialog
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapte
     FormsModule,
     NgSelectModule
   ],
-  providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}}],
-  bootstrap: [AppComponent]
+  providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}}, AuthService],
+  bootstrap: [AppComponent],
+  entryComponents: [StopTrainingDialog]
 })
 export class AppModule { }

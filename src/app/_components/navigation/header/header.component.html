@@ -1,33 +1,32 @@
-
-    <mat-toolbar color="primary">
-      <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSideNav()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </div>
-      <div><a routerLink="/">Logo</a></div>
-      <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
-          <li *ngIf="!isAuth" class="mr-3">
-            <a routerLink="/signup">
-              <mat-icon>person</mat-icon> Signup
-            </a>
-          </li>
-          <li *ngIf="!isAuth" class="mr-3">
-            <a routerLink="/login">
-              <mat-icon>input</mat-icon> Login
-            </a>
-          </li>
-          <li *ngIf="isAuth" class="mr-3">
-            <a routerLink="/training">
-              <mat-icon>fitness_center</mat-icon> Training
-            </a>
-          </li>
-          <li *ngIf="isAuth" class="mr-3">
-            <a style="cursor: pointer;" (click)="onLogout()">
-              <mat-icon>eject</mat-icon> Logout
-            </a>
-          </li>
-        </ul>
-      </div>
-    </mat-toolbar>
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button (click)="onToggleSideNav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+  <div><a routerLink="/">Logo</a></div>
+  <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+      <li *ngIf="!isAuth" class="mr-3">
+        <a routerLink="/signup">
+          <mat-icon>person</mat-icon> Signup
+        </a>
+      </li>
+      <li *ngIf="!isAuth" class="mr-3">
+        <a routerLink="/login">
+          <mat-icon>input</mat-icon> Login
+        </a>
+      </li>
+      <li *ngIf="isAuth" class="mr-3">
+        <a routerLink="/training">
+          <mat-icon>fitness_center</mat-icon> Training
+        </a>
+      </li>
+      <li *ngIf="isAuth" class="mr-3">
+        <a style="cursor: pointer;" (click)="onLogout()">
+          <mat-icon>eject</mat-icon> Logout
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-toolbar>

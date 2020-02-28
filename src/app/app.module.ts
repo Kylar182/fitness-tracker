@@ -21,7 +21,8 @@ import { SidenavListComponent } from './_components/navigation/sidenav-list/side
 
 import { MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { StopTrainingDialog } from './_components/training/currenttraining/stop-training/stop-training.component';
-import { AuthService } from './_services/AuthService';
+import { AuthService } from './_services/auth.service';
+import { TrainingService } from './_services/training.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AuthService } from './_services/AuthService';
     FormsModule,
     NgSelectModule
   ],
-  providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}}, AuthService],
+  providers: [{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {strict: true}},
+                AuthService, TrainingService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingDialog]
 })

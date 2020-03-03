@@ -31,7 +31,7 @@ export class TrainingService {
   cancelExercise(progress: number) {
     this.exercises.push({ ...this.runningExercise, date: new Date(),
       duration: this.runningExercise.duration * (progress / 100),
-      calories: this.runningExercise.duration * (progress / 100),
+      calories: this.runningExercise.calories * (progress / 100),
       state: 'cancelled'});
     this.runningExercise = null;
     this.exerciseChanged.next(null);
@@ -39,5 +39,9 @@ export class TrainingService {
 
   getRunningExercise() {
     return { ...this.runningExercise };
+  }
+
+  getCompletedOrCancelledExercises() {
+    return this.exercises.slice();
   }
 }

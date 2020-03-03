@@ -13,16 +13,18 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
   imports: [ MatFormFieldModule, MatInputModule, MatButtonModule, MatFormFieldModule,
              MatIconModule, MatMomentDateModule, MatDatepickerModule, MatCheckboxModule,
              MatSidenavModule, MatToolbarModule, MatListModule, MatTabsModule, MatCardModule,
-            MatProgressSpinnerModule, MatDialogModule ],
+            MatProgressSpinnerModule, MatDialogModule, MatTableModule, MatSortModule ],
   exports: [ MatFormFieldModule, MatInputModule, MatButtonModule, MatFormFieldModule,
              MatIconModule, MatMomentDateModule, MatDatepickerModule, MatCheckboxModule,
              MatSidenavModule, MatToolbarModule, MatListModule, MatTabsModule, MatCardModule,
-            MatProgressSpinnerModule, MatDialogModule ]
+            MatProgressSpinnerModule, MatDialogModule, MatTableModule, MatSortModule ]
 })
 export class MaterialModule { }
